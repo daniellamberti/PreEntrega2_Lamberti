@@ -38,11 +38,6 @@ function promedioExamenes(materia, cantExamenes,asignatura) {
 
 	}
 
-	alert(`Tus tres notas de ${asignatura} son:\n
-	Examen 1:  ${materia[0]}\n
-	Examen 2:  ${materia[1]}\n
-	Examen 3:  ${materia[2]}`);
-
 	alert(`La suma de tus ${cantExamenes} exámenes de ${asignatura} es ${suma.toFixed(2)}`);
 	promedio = suma / cantExamenes;
 
@@ -50,19 +45,20 @@ function promedioExamenes(materia, cantExamenes,asignatura) {
 }
 
 		/* Se obtienen las notas de los 3 exámenes de INSTRUMENTO  utilizando la función correspondiente y
-      		se realiza el promedio de las mismas. */
+      		              se realiza el promedio de las mismas. */
 
 alert("Hola " + nombre + " , comenzaremos por la materia INSTRUMENTO, ingresá las 3 calificaciones obtenidas");
 promedioExamenes(instrumento, 3,"instrumento");
 promedioInst = promedio;
 
 alert("El promedio de tus tres notas de exámenes de instrumento es " + promedioInst.toFixed(2));
-	if (promedio >= 6) {
-		alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
-	}
-	else {
-		alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
-	}
+
+if (promedio >= 6) {
+	alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
+}
+else {
+	alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
+}
 
 
         /* Se obtienen las notas de los 5 exámenes de TEORÍA y se realiza el promedio de las mismas. */
@@ -72,13 +68,14 @@ promedioExamenes(teoria,5,"teoria");
 
 promedioTeor = promedio;
 
-alert("El promedio de tus tres notas de exámenes de teoría es " + promedioTeor.toFixed(2));
-	if (promedio >= 6) {
-		alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
-	}
-	else {
-		alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
-	}
+alert("El promedio de tus cinco notas de exámenes de teoría es " + promedioTeor.toFixed(2));
+
+if (promedio >= 6) {
+	alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
+}
+else {
+	alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
+}
 
 
 
@@ -89,13 +86,14 @@ alert("El promedio de tus tres notas de exámenes de teoría es " + promedioTeor
 
  promedioArm = promedio;
 
- alert("El promedio de tus tres notas de exámenes de armonía es " + promedioArm.toFixed(2));
-	if (promedio >= 6) {
-		alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
-	}
-	else {
-		alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
-	}
+ alert("El promedio de tus cuatro notas de exámenes de armonía es " + promedioArm.toFixed(2));
+
+if (promedio >= 6) {
+	alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
+}
+else {
+	alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
+}
 
 
        /* Se obtienen las notas de los 3 examenes de ENSAMBLE y se realiza el promedio de las mismas. */
@@ -105,12 +103,13 @@ promedioExamenes(ensamble, 3,"ensamble");
 promedioEns = promedio;
 
 alert("El promedio de tus tres notas de exámenes de ensamble es " + promedioEns.toFixed(2));
-	if (promedio >= 6) {
-		alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
-	}
-	else {
-		alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
-	}
+
+if (promedio >= 6) {
+	alert("Tu promedio es igual o mayor que 6 por lo tanto tenés esta materia aprobada");
+}
+else {
+	alert("Tu promedio es menor que 6 por lo tanto debés repetir el examen o exámenes reprobados para poder aprobar la materia");
+}
 
                                   /* Se crea el OBJETO alumno */
 
@@ -180,7 +179,8 @@ alert("Según los datos ingresados, considerando la nota promedio de las notas d
 
 if (alumno.notaFinal() >=6) {
 	alert("Tu nota promedio final de curso es igual o mayor que 6 por lo tanto estas APROBADO");
-} else {
+}
+else {
 	alert("Tu nota promedio final de curso es menor a 6 por lo tanto estas REPROBADO y debés cursarlo nuevamente");
 }
 
@@ -208,19 +208,18 @@ do {
 			}
 			return notaMasAlta;
 		}
-		alert("Las notas más altas obtenidas en los exámenes de las distintas asignatura fueron:" + "\n" + "Instrumento: " + notaMaxExam(instrumento) + "\n" + "Teoria: " + notaMaxExam(teoria) + "\n" + "Armonia: " + notaMaxExam(armonia) + "\n" + "Ensamble: " + notaMaxExam(ensamble));
+		alert("La nota más alta obtenida en los exámenes de las distintas asignaturas fue:" + "\n" + "Instrumento: " + notaMaxExam(instrumento) + "\n" + "Teoria: " + notaMaxExam(teoria) + "\n" + "Armonia: " + notaMaxExam(armonia) + "\n" + "Ensamble: " + notaMaxExam(ensamble));
 	}
-
 
 	else if(consultas == 4) {
 		function notaMinExam(materias){
-			let notaMasBaja = 0;
+			let notaMasBaja = 11;
 			for(let i = 0; i < materias.length; i++) {
-				if(materias[i] > notaMasBaja) notaMasBaja = materias[i];
+				if(materias[i] < notaMasBaja) notaMasBaja = materias[i];
 			}
 			return notaMasBaja;
 		}
-		alert("Las notas más bajas obtenidas en los exámenes de las distintas asignatura fueron:" + "\n" + "Instrumento: " + notaMinExam(instrumento) + "\n" + "Teoria: " + notaMinExam(teoria) + "\n" + "Armonia: " + notaMinExam(armonia) + "\n" + "Ensamble: " + notaMinExam(ensamble));
+		alert("La notas más baja obtenida en los exámenes de las distintas asignaturas fue:" + "\n" + "Instrumento: " + notaMinExam(instrumento) + "\n" + "Teoria: " + notaMinExam(teoria) + "\n" + "Armonia: " + notaMinExam(armonia) + "\n" + "Ensamble: " + notaMinExam(ensamble));
 	}
 
 	else if(consultas == 5) {
