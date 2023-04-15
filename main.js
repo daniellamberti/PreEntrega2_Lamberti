@@ -176,12 +176,9 @@ while((faltas != 1) && (faltas!= 2));
 
           /* Se recuerda al usuario cuales son los promedios de cada una de las materias rendidas. */
 
-alert("Aca estoy probando un Metodo for each");
-
 alumno.promediosAsig.forEach((producto)=>{
     console.log(producto)
 });
-
 
 
 alert(`Te recordamos que obtuviste las siguientes notas promedio a saber: \n` +
